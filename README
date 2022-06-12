@@ -13,7 +13,15 @@ we can install deepface directly on pip, and the wrapped model will automaticall
 after some tuning and test we found out that using FaceNet model is much more better on Id card rather than using the default deepface model that is
 VGG-Face.
 
-edit: in the end we don't use the deepface or the tesseract ocr.
+edit: in the end we don't use the deepface or the tesseract ocr. just to be safe because we know we can;t just plug in a working model in our project.
+
+we tried to create an OCR enginer with reference to some sources, but the engine work so horrible that it can barely extract any information from the id card
+i guess the OCR for ID card is far more chalenging than regular OCR that we can find to recognize a street sign, this specific task needs more improving in our part.
+
+
+we are trying to make a mockup for the verification, we used classification and transfer learning it from MobileNetV2, adding some additional layer, 
+with 3 class for activation, the mockup works to classify a face and an ID card into the same classess,so it doesn't really do what we expected to do like what
+deepface does,
 
 
 
@@ -27,3 +35,5 @@ source:
   https://towardsdatascience.com/googles-tesseract-ocr-how-good-is-it-on-documents-d71d4bf7640
   https://pypi.org/project/deepface/
   https://arxiv.org/pdf/2101.05214.pdf
+  https://medium.com/analytics-vidhya/optical-character-recognition-using-tensorflow-533061285dd3
+  
